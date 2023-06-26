@@ -1,0 +1,99 @@
+/* Common styles for all devices */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin-top: 0;
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  padding: 5px;
+  font-family: Arial, sans-serif;
+}
+
+header h1 {
+  padding: 50px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Add spacing between sections */
+ 
+  margin-right: -10px; /* Add negative margin to counteract the spacing */
+}
+
+section {
+  flex: 0 0 calc(33.33% - 10px); /* Adjust width of sections with spacing */
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ddc6c6;
+  border-radius: 20px;
+  background-color: #cabebe;
+  position: relative;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+.subtitle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px;
+  border-radius: 12px;
+  box-shadow: inset;
+  background-color: #f57e7e;
+  color: #FFF;
+  font-size: 125%;
+  z-index: 1;
+}
+
+section p {
+  margin-top: 30px;
+  
+}
+
+/* Styles for desktop devices */
+@media only screen and (min-width: 992px) {
+  section {
+    margin-right: 10px; /* Add margin-right for spacing between sections */
+  }
+}
+
+/* Styles for tablet devices */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  section {
+    flex-basis: 49%;
+  }
+  section:nth-child(3) {
+    flex-basis: 100%;
+    clear: both;
+  }
+}
+
+/* Styles for mobile devices */
+@media only screen and (max-width: 767px) {
+  section {
+    flex-basis: 100%;
+  }
+}
+
+/* Optional: Set font-family and font size */
+body {
+  font-family: "Helvetica", Arial, sans-serif;
+}
+h1.title {
+  font-size: 175%;
+  text-align: center; /* Center the h1 heading */
+}
+h1.subtitle {
+  font-size: 125%;
+}
+p {
+  font-size: 100%;
+  overflow-wrap: break-word; /* Prevent long words from overflowing the box */
+}
